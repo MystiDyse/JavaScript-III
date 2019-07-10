@@ -22,11 +22,43 @@ function Kitty(color) {
 // Principle 2
 
 // code example for Implicit Binding
+let helloKitty = {
+    greeting: 'Hello ',
+    speak: function(catsName) {
+        console.log(this.greeting + catsName);
+        console.log(this);
+    }
+}
+
+helloKitty.speak('Professor Fluffington');
 
 // Principle 3
 
 // code example for New Binding
+function Cat(name, color, breed, meow) = {
+    this.name = name;
+    this.color = color;
+    this.breed = breed;
+    this.meow = meow;
+    this.introduction = function(){
+        console.log('My name is ' + this.name +'.' + 'I am a ' + this.color + this.breed + this.meow)
+    };
+}
 
+let pinkyCat = new Cat('Pinky','pink','sphynx','meeeoooww!');
+let GeorgeCat = new Cat('George','brown','mainecoon','nya!');
+
+pinkyCat();
+GeorgeCat();
 // Principle 4
 
 // code example for Explicit Binding
+function Cats() {
+    console.log(this.hi);
+}
+let myCat = {
+    name: 'Johnny',
+    hi: `Hi I'm ${this.name}`,
+}
+
+Cats.call(myCat);
