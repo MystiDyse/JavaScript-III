@@ -35,7 +35,7 @@ helloKitty.speak('Professor Fluffington');
 // Principle 3
 
 // code example for New Binding
-function Cat(name, color, breed, meow) = {
+function Cat(name, color, breed, meow) {
     this.name = name;
     this.color = color;
     this.breed = breed;
